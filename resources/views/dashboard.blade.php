@@ -8,8 +8,17 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+                <div class="p-6 text-gray-900 font-black dark:text-gray-100">
+                    {{ __("Tall Tales Uncensored") }}
+                    <ul>
+                        @foreach ($jobs as $job)
+                            <li class="hover:underline ">
+                                <a href="/jobs/{{ $job['id'] }}">
+                                    {{ $job['title'] }}. 
+                                </a>
+                            </li>
+                        @endforeach    
+                    </ul>
                 </div>
             </div>
         </div>
