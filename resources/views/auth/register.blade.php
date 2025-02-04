@@ -3,16 +3,16 @@
         @csrf
 
         <!-- Name -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
         <!-- invite code  -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="invite-code" :value="__('Invite Code')" />
-            <x-text-input id="nainvite-codeme" class="block mt-1 w-full" type="text" name="invite-code" :value="old('invite-code')" required autofocus autocomplete="invite-code" />
+            <x-text-input id="invite-code" class="block mt-1 w-full" type="text" name="invite-code" :value="old('invite-code')" required autofocus autocomplete="invite-code" />
             <x-input-error :messages="$errors->get('invite-code')" class="mt-2" />
         </div>
 
