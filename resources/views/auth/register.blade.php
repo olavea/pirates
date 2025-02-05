@@ -12,7 +12,7 @@
         <!-- invite code  -->
         <div class="mt-4">
             <x-input-label for="invite-code" :value="__('Invite Code')" />
-            <x-text-input id="invite-code" class="block mt-1 w-full" type="text" name="invite-code" :value="old('invite-code')" required autofocus autocomplete="invite-code" />
+            <x-text-input id="invite-code" class="block mt-1 w-full" type="text" value="123" name="invite-code" required autofocus autocomplete="invite-code" />
             <x-input-error :messages="$errors->get('invite-code')" class="mt-2" />
         </div>
 
