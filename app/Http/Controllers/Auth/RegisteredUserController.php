@@ -31,10 +31,15 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'invite-code' => ['required',  ], 
+            'invite' => ['required',  ], 
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+        $invite = 123;
+        if ($request->invite !=$invite) {
+            return redirect(route('dashboard', absolute: false));
+        }
+
 
         $user = User::create([
             'name' => $request->name,

@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/noinvite', function () {
+    return view('noinvite');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard', [
         'jobs' => [
