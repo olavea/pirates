@@ -22,8 +22,11 @@
             <!-- Page Heading -->
             @isset($header)
                 <header class="bg-emerald dark:bg-emerald-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-right">
-                        {{ $header }}
+                    <div class="flex">
+                        <div class="max-w-7xl mx-auto py-9 px-4 sm:px-6 lg:px-8 text-right">
+                            {{ $header }}
+                        </div>
+                        <x-primary-button href="/add">Tell Your Tale</x-button>
                     </div>
                 </header>
             @endisset
