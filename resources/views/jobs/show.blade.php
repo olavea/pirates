@@ -9,5 +9,6 @@
 
     <p>
         {{ $job['salary'] }}
-    </p>
+    </p class="mt-6">
+    <x-primary-button href="/jobs/{{ $job['id'] }}/edit">Edit Your tale</x-primary-button>
 </x-app-layout>
