@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <form method="POST" action="/tales">
+    <form method="POST" action="/tall_tales">
         @csrf 
         <div class="space-y-12">
 

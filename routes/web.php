@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
 Route::get('/', function () {
+//        $jobs = Job::all();
+
+//        dd($jobs[1]->title);
+
+
     return view('welcome');
 });
 
@@ -16,30 +21,19 @@ Route::get('/noinvite', function () {
 // dashboard
 Route::get('/tales', function () {
     return view('jobs/index', [
-        'jobs' => [
-            [
-                'id' => 1,
-                'title' => 'Barbeque Party at Berglunds', 
-                'salary' => 'The party started with chilled prosecco in tall glasses and hard cheese with little spicy biscuits. With the patriarch of Berglunds I discussed our mutual satisfation with the personal attention our young ladies get from strong teachers at private and creative schools. The grilled meat and grilled vegetables were delicious. And a powerful red wine. But the triumphant high point: dessert! Crusty Blackberry Pie with icecreams and vanilla sauce.'
-            ],
-            [
-                'id' => 2,
-                'title' => 'The Dev Pirate Princess 🏴‍☠️👸 Redesigns Our POW! Website!',
-                'salary' => '«I am bored» Said the Pirate Princess. «You wanna help me redesign our POW! website?» Captain Ola Said. «YES!» Said the little Pirate. «Let us play around with background colors in Tailwind.» Captain Ola Said. She looked for "bg" in Visual Studio Code. Then guessed the english spelling of "orange" and "yellow", which where the colors she most frequently chose.'
-            ],
-        ]    
+        'jobs' => Job::all()
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 
-
+// Create
 Route::get('/add', function () {
     return view('jobs/create');
 })->middleware(['auth', 'verified'])->name('add');
 
 // new
-Route::post('/tales', function () {
+Route::post('/tall_tales', function () {
     // test it with dd -> 419 expired : 💀
     // dd('yo yo YO');
 
