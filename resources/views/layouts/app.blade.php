@@ -15,25 +15,29 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="h-full p-4 dark:bg-emerald-400 bg-emerald-400 font-black font-sans antialiased">
+    <!-- Regnbue -->
+    <body class="bg-gradient-to-b from-emerald-600 to-emerald-400 dark:bg-gradient-to-b dark:from-emerald-600 dark:to-emerald-400 h-full p-5 font-black font-sans antialiased">
         <div class="min-h-screen ">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
+            <!-- Regnbue -->
             @isset($header)
-                <header class="bg-emerald dark:bg-emerald-800 shadow">
-                    <div class="flex">
-                        <div class="max-w-7xl mx-auto py-9 px-4 sm:px-6 lg:px-8 text-right">
+                <header class="bg-gradient-to-b from-red-600 to-orange-400 dark:bg-gradient-to-b dark:from-emerald-800 dark:to-emerald-700 shadow">
+                    <div class=" sm:flex">
+                        <div class="max-w-7xl mx-auto font-black py-3 px-4 sm:px-6  lg:px-8 text-right">
                             {{ $header }}
                         </div>
-                        <x-primary-button href="/add">Tell Your Tale</x-button>
+                        
                     </div>
                 </header>
             @endisset
 
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="mb-3">
+                <div class="mt-2">
+                    {{ $slot }}
+                </div>
             </main>
         </div>
     </body>

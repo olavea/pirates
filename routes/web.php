@@ -11,7 +11,7 @@ Route::get('/', function () {
 //        dd($jobs[1]->title);
 
 
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/noinvite', function () {
@@ -20,6 +20,7 @@ Route::get('/noinvite', function () {
 
 // dashboard
 Route::get('/tales', function () {
+     $jobs = Job::all();
     return view('jobs/index', [
         'jobs' => Job::all()
     ]);
@@ -61,18 +62,18 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/jobs/{id}/edit', function ($id) {
-    $jobs = [
-        [
-            'id' => 1,
-            'title' => 'Barbeque Party at Berglunds', 
-            'salary' => 'The party started with chilled prosecco in tall glasses and hard cheese with little spicy biscuits. With the patriarch of Berglunds I discussed our mutual satisfation with the personal attention our young ladies get from strong teachers at private and creative schools. The grilled meat and grilled vegetables were delicious. And a powerful red wine. But the triumphant high point: dessert! Crusty Blackberry Pie with icecreams and vanilla sauce.'
-        ],
-        [
-            'id' => 2,
-            'title' => 'The Dev Pirate Princess 🏴‍☠️👸 Redesigns Our POW! Website!',
-            'salary' => '«I am bored» Said the Pirate Princess. «You wanna help me redesign our POW! website?» Captain Ola Said. «YES!» Said the little Pirate. «Let us play around with background colors in Tailwind.» Captain Ola Said. She looked for "bg" in Visual Studio Code. Then guessed the english spelling of "orange" and "yellow", which where the colors she most frequently chose.'
-        ], 
-    ];
+    // $jobs = [
+    //     [
+    //         'id' => 1,
+    //         'title' => 'Barbeque Party at Berglunds', 
+    //         'salary' => 'The party started with chilled prosecco in tall glasses and hard cheese with little spicy biscuits. With the patriarch of Berglunds I discussed our mutual satisfation with the personal attention our young ladies get from strong teachers at private and creative schools. The grilled meat and grilled vegetables were delicious. And a powerful red wine. But the triumphant high point: dessert! Crusty Blackberry Pie with icecreams and vanilla sauce.'
+    //     ],
+    //     [
+    //         'id' => 2,
+    //         'title' => 'The Dev Pirate Princess Redesigns Our POW! Website!',
+    //         'salary' => '«I am bored» Said the Pirate Princess. «You wanna help me redesign our POW! website?» Captain Ola Said. «YES!» Said the little Pirate. «Let us play around with background colors in Tailwind.» Captain Ola Said. She looked for "bg" in Visual Studio Code. Then guessed the english spelling of "orange" and "yellow", which where the colors she most frequently chose.'
+    //     ], 
+    // ];
     $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
 
     
@@ -89,7 +90,7 @@ Route::get('/jobs/{id}', function ($id) {
         ],
         [
             'id' => 2,
-            'title' => 'The Dev Pirate Princess 🏴‍☠️👸 Redesigns Our POW! Website!',
+            'title' => 'The Dev Pirate Princess Redesigns Our POW! Website!',
             'salary' => '«I am bored» Said the Pirate Princess. «You wanna help me redesign our POW! website?» Captain Ola Said. «YES!» Said the little Pirate. «Let us play around with background colors in Tailwind.» Captain Ola Said. She looked for "bg" in Visual Studio Code. Then guessed the english spelling of "orange" and "yellow", which where the colors she most frequently chose.'
         ], 
     ];
