@@ -15,11 +15,12 @@
                     <div class="space-y-4">
                         @foreach ($jobs as $job)
                             
-                                <a 
-                                    href="/jobs/{{ $job['id'] }}" 
-                                    class="text-xl font-black block px-4 py-6 border border-emerald-600 rounded-xl">
-                                        {{ $job['title'] }}. 
-                                </a>
+                            <a 
+                                href="/jobs/{{ $job['id'] }}" 
+                                class="text-xl font-black block px-4 py-6 border hover:border-2 hover:bg-emerald-600 hover:border-emerald-800 border-emerald-600 rounded-xl"
+                            >
+                                {{ $job['title'] }}. 
+                            </a>
                             
                         @endforeach    
                     </div>

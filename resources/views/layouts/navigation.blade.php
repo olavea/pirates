@@ -1,4 +1,5 @@
-<nav x-data="{ open: false }" class="bg-gradient-to-b from-blue-600 to-blue-400 dark:bg-gradient-to-b dark:from-blue-800 dark:to-blue-700 border-b border-gray-100 dark:border-gray-700">
+<!-- Regnbue Rainbow -->
+<nav x-data="{ open: false }" class="bg-gradient-to-b from-blue-600 to-blue-200 dark:bg-gradient-to-b dark:from-purple-800 dark:to-blue-500 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">

@@ -5,7 +5,9 @@
         </h2>
     </x-slot>
     <br />
-    <h2 class="mt-9 font-bold text-3xl">{{ $job['title'] }}</h2>
+    <h2 class="mt-9 font-bold text-3xl">
+        {{ $job['title'] }}
+    </h2>
 
     <p class="mt-6">
         {{ $job['salary'] }}

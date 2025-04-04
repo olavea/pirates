@@ -15,15 +15,15 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <!-- Regnbue -->
-    <body class="bg-gradient-to-b from-emerald-600 to-emerald-400 dark:bg-gradient-to-b dark:from-emerald-600 dark:to-emerald-400 h-full p-5 font-black font-sans antialiased">
+    <!-- Regnbue Rainbow -->
+    <body class="bg-gradient-to-b from-emerald-600 to-emerald-400 dark:bg-gradient-to-b dark:from-emerald-800 dark:to-emerald-500 h-full p-5 font-black font-sans antialiased">
         <div class="min-h-screen ">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
-            <!-- Regnbue -->
+            <!-- Regnbue Rainbow -->
             @isset($header)
-                <header class="bg-gradient-to-b from-red-600 to-orange-400 dark:bg-gradient-to-b dark:from-emerald-800 dark:to-emerald-700 shadow">
+                <header class="bg-gradient-to-b from-red-600 to-orange-400 dark:bg-gradient-to-b dark:from-red-600 dark:to-yellow-400 shadow">
                     <div class=" sm:flex">
                         <div class="max-w-7xl mx-auto font-black py-3 px-4 sm:px-6  lg:px-8 text-right">
                             {{ $header }}
