@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('tall_tales', function (Blueprint $table) {
             $table->id();
-
+                //id
+            //$table->string('employer')    
             $table->string('title');
             $table->longText('salary');
             $table->timestamps();
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('tall_tales');
+         Schema::dropIfExists('tall_tales');
     }
 };
